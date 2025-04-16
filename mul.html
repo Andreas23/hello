@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Trainer</title>
+  <script src="mul.js"></script>
+  <link rel="stylesheet" href="mul.css">
+</head>
+<body>
+  
+  <nav>
+    <a href="#" onclick="showSection('multiplication')" class="active">Multiplication</a>
+    <a href="#" onclick="showSection('division')">Division</a>
+    <a href="#" onclick="showSection('squares')">Squares</a>
+    <a href="#" onclick="showSection('squareroots')">Square Roots</a>
+    <a href="#" onclick="showSection('decimals')">Decimals</a>
+    <a href="#" onclick="showSection('fractions')">Fractions</a>
+  </nav>
+
+  <!-- Sticky Timer -->
+  <div id="timerDisplay">⏱️ <span id="time">00:00</span></div>
+
+  <main class="container">
+    <h1 id="title">🧮 Multiplication Trainer</h1>
+    <p>
+      How many questions?
+      <input type="number" id="count" min="1" max="20" value="5">
+      Timer (minutes):
+      <input type="number" id="timerMinutes" min="1" max="60" value="1">
+      <button onclick="startQuiz()">Start</button>
+    </p>
+    <form id="quizForm" onsubmit="checkAnswers(event)"></form>
+    <div class="result" id="result"></div>
+    <div id="refreshContainer"></div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="topBtn">↑</button>
+
+</body>
+</html>
