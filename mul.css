@@ -199,3 +199,12 @@
         right: 10px;
       }
   }
+@media (max-width: 360px) {
+  #topBtn {
+    font-size: 10px;
+    padding: 6px 8px;
+    bottom: 10px;
+    right: 8px;
+  }
+}
+
